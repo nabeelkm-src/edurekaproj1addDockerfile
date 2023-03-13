@@ -1,6 +1,7 @@
 ---
 - name: Configuring Docker
   hosts: all
+  gathering_facts: false
   tasks:
      - name: Adding Docker Repository
        yum_repository:
