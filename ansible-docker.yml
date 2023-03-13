@@ -1,7 +1,6 @@
 ---
-- name : Configuring Docker
+- name: Configuring Docker
   hosts: 15.207.115.102
-  gathering_facts: false
   tasks:
      - name: Adding Docker Repository
        yum_repository:
