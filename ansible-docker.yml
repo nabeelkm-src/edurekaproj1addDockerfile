@@ -1,0 +1,22 @@
+---
+name : Configuring Docker
+hosts: all
+tasks:
+- name: Adding Docker Repository
+  yum_repository:
+  name: Docker
+  description: Docker_Repo
+  baseurl: https://download.docker.com/linux/ubuntu/gpg
+  gpgcheck: no
+- name: Installing Docker Package
+  package:
+     name: "docker-ce docker-ce-cli containerd.io"
+     state: present
+- name: Starting Docker Service
+  service:
+     name: "docker"
+     state: started
+     enabled: yes
+- name: Installing Docker SDK for Python3
+  command: pip3 install docker
+  
