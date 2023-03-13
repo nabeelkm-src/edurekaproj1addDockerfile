@@ -1,6 +1,6 @@
 ---
 - name: Configuring Docker
-  hosts: all
+  hosts: docker
   gather_facts: no
   tasks:
      - name: Adding Docker Repository
